@@ -1,10 +1,10 @@
 package com.example.demo.serviceImpl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.demo.entity.Persona;
 import com.example.demo.repository.PersonaRepository;
 import com.example.demo.service.PersonaService;
@@ -41,5 +41,13 @@ public class PersonaServiceImpl implements PersonaService {
 	public Persona findById(int id) {
 		return personarepository.findById(id);
 	}
+
+	@Override
+	public List<Map<String, Object>> readWithJoin() {
+		// TODO Auto-generated method stub
+		return personarepository.findALLID();
+	}
+
+
 	
 }

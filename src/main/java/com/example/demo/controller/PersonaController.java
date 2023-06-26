@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,6 +29,11 @@ public class PersonaController {
 	@GetMapping("/all")
 	 public List<Persona> getAllPersona() {
 	        return personaServiceimpl.readAll();
+	 }
+	
+	@GetMapping("/join")
+	 public List<Map<String, Object>> getAllWithJoin() {
+	        return personaServiceimpl.readWithJoin();
 	 }
 	
 	 @PostMapping("/create")

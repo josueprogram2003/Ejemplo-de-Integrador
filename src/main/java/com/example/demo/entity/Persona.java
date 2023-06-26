@@ -1,10 +1,8 @@
 package com.example.demo.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-@AllArgsConstructor /* CONSTRUCTOR CON TODOS LOS DATOS*/
+ /* CONSTRUCTOR CON TODOS LOS DATOS*/
 @NoArgsConstructor /* CONSTRUCTOR SIN DATOS*/
 @Data
 public class Persona {
@@ -12,13 +10,27 @@ public class Persona {
 	private String nombres;
 	private String apellidos;
 	private String dni;
+	private int idescuela;
+	private Escuela escuela;
 	
-	public Persona(String nombres, String apellidos, String dni) {
+	public Persona(String nombres, String apellidos, String dni,int idescuela) {
 		super();
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.dni = dni;
+		this.idescuela=idescuela;
 	}
+
+	public Persona(int id, String nombres, String apellidos, String dni, int idescuela) {
+		super();
+		this.id = id;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.dni = dni;
+		this.idescuela = idescuela;
+	}
+	
+	
 	
 	
 }

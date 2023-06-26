@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-public class Empresa {
+public class Escuela {
 	
 	
 	private Persona persona;
